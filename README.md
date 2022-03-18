@@ -211,7 +211,7 @@ Il faudra par la suite rentrer dans le shell de mysql pour faire les commandes s
 >> sudo mysql -u root -p 
 Enter password:root
 CREATE DATABASE mydb; 
-GRANT ALL PRIVILEGES ON mydb.* TO anicet_e@localhost identified BY 'my_secret_password'; 
+GRANT ALL PRIVILEGES ON mydb.* TO votre_login@localhost identified BY 'votre_mot_de_passe'; 
 FLUSH PRIVILEGES; 
 exit 
 ```
