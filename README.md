@@ -232,7 +232,14 @@ Il faudra mettre à jour wordpress et php :
 sudo apt upgrade wordpress && sudo apt upgrade php
 ```
 
-Une fois sur l'interface wordpress depuis votre navigateur en tapant l'ip de votre serveur sur la barre recherche. Il faudra renseigner quelques informations pour relier à la base de données et à l'utilisateur créé précedemment. De retour sur le cli, dans le dossier `/var/www/html` il faudra faire la commande `sudo touch wp-config.php && sudo nano wp-config.php` puis lui insérer le contenu comme indiqué par le site. Pensez à bien sauvegarder le fichier puis cliqué sur "Run the installation" sur la page de wordpress". Le site va vous accompagner lors de la configuration de votre compte admin. Enfin vous pourrez vous connecter. 
+Une fois sur l'interface wordpress depuis votre navigateur en tapant l'ip de votre serveur sur la barre recherche. Il faudra renseigner quelques informations pour relier à la base de données et à l'utilisateur créé précedemment.<img width="960" alt="wordpress" src="https://user-images.githubusercontent.com/92017625/159031518-99e1194f-3c09-4cdb-b7bd-a4b5f2d4ae39.png">
+
+De retour sur le cli, dans le dossier `/var/www/html` il faudra faire la commande `sudo touch wp-config.php && sudo nano wp-config.php` puis lui insérer le contenu comme indiqué par le site.
+<img width="960" alt="wordpress2" src="https://user-images.githubusercontent.com/92017625/159031659-1f1fd357-9a57-4ff3-aad7-7d4fcc904482.png">
+
+Pensez à bien sauvegarder le fichier puis cliqué sur "Run the installation" sur la page de wordpress". Le site va vous accompagner lors de la configuration de votre compte admin. Enfin vous pourrez vous connecter. 
+
+<img width="960" alt="wordpress3" src="https://user-images.githubusercontent.com/92017625/159031694-2160ec04-0173-479a-99d1-86b571bc9f34.png">
 
 
 
