@@ -225,7 +225,6 @@ Installation et configuration de Wordpress :
 >> sudo mv wordpress/* /var/www/html/ 
 >> cd /var/www/html/
 >> sudo rm index.html
->> rm: remove write-protected regular file 'index.html'? yes
 ```
 
 Il faudra mettre à jour wordpress et php : 
