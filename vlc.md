@@ -21,4 +21,32 @@ Pour lire une video video ou bien de soundcloud il faut depuis l'application all
 
 ## Etape 2 : 
 
+Pour lire une video vlc utiise deux fonctions, la fonction `probe()`, et la fonction `parse()`. La première permet de verifier grâce à la méthode `vlc.access` si c'est bien un lien `http` ou `https` et si c'est le cas on verifie si ça match avec le pattern du lien de tiktok. 
 
+```lua
+function probe()
+    return (vlc.access == "http" or vlc.access == "https")
+    and string.match( vlc.path, "^www%.tiktok%.com/.+/.+/.+")
+end
+```
+
+Ensuite viens la fonction `parse()` qui est appelé que si `probe()` renvoie `true`. Cette dernière va scrapper les données ligne par ligne pour en fonction du pattern donné en paramètre pour lire le lien. 
+
+```lua
+
+function parse()
+    if string.match( vlc.path, "^www%.tiktok%.com/.+/.+/.+" ) then
+        -- The /config API will return the data on a single line.
+        -- Otherwise, search the web page for the config.
+        local config = vlc.readline()
+        while true do
+            local line = vlc.readline()
+            if not line then break end
+            if string.match( line, "var config = {" ) then --@id"/.+/.+/video              |         (pour moi ) x  @id":"https://www.tiktok.com/.+/video 
+                config = line
+                break
+            end
+        end
+
+    end
+  ```
